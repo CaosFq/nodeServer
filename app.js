@@ -43,7 +43,9 @@ app.use((req, res, next) => {
 //Routes
 
 app.get("/", (req, res) => {
-  res.render("app");
+  res.render("app", {
+    courses,
+  });
 });
 app.listen(port, () => {
   console.log(`App running on port ${port}🙌`);
